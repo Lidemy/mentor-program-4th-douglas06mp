@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>新拖延運動報名單</title>
+  </head>
+  <body>
+    <h1>新拖延運動報名表單</h1>
+    <p>活動日期：2020/12/10 ~ 2020/12/11</p>
+    <p>活動地點：台北市大安區新生南路二段1號</p>
+
+    <p class="need">* 必填</p>
+
+    <div class="input-group">
+      <label for="name" class="label"> 暱稱<span class="need"> *</span></label>
+      <input type="text" name="name" placeholder="你的回答" />
+    </div>
+
+    <div class="input-group">
+      <label for="email" class="label">
+        電子郵件<span class="need"> *</span>
+      </label>
+      <input type="text" type="email" name="email" placeholder="你的回答" />
+    </div>
+
+    <div class="input-group">
+      <label for="number" class="label">
+        手機號碼<span class="need"> *</span>
+      </label>
+      <input type="text" name="number" placeholder="你的回答" />
+    </div>
+
+    <div class="input-group radio">
+      <label class="label">報名類型<span class="need"> *</span></label>
+      <div class="radio-group">
+        <input type="radio" name="type" id="dream" value="dream" />
+        <label for="dream" class="radio-label">躺在床上用想像力實作</label>
+      </div>
+      <div class="radio-group">
+        <input type="radio" name="type" id="do" value="do" />
+        <label for="do" class="radio-label">趴在地上滑手機找現成的</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="how" class="label">
+        怎麼知道這個活動的?<span class="need"> *</span>
+      </label>
+      <input type="text" name="how" placeholder="你的回答" />
+    </div>
+
+    <div class="input-group other">
+      <label for="other" class="label">其他</label>
+      <p>對活動的一些建議</p>
+      <input type="text" name="other" placeholder="你的回答" />
+    </div>
+
+    <button class="submit">提交</button>
+    <p>請勿透過表單送出您的密碼。</p>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+@mixin media-query($breakpoint) {
+  @if $breakpoint == mobile-portrait {
+    @media only screen and (max-width: 414px) {
+      @content;
+    }
+  }
+}

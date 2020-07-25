@@ -1,0 +1,16 @@
+{
+  "name": "week6",
+  "version": "1.0.0",
+  "description": "圖片參考：",
+  "main": "index.js",
+  "scripts": {
+    "sass-hw1": "node-sass hw1/sass/main.scss hw1/css/main.css -w",
+    "sass-hw2": "node-sass hw2/sass/main.scss hw2/css/main.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

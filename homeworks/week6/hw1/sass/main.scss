@@ -1,0 +1,344 @@
+@import 'media-query';
+@import 'variable';
+@import 'reset';
+
+// NAV
+.nav {
+  position: fixed;
+  background-color: $color-white;
+  height: 8rem;
+  width: 100%;
+  z-index: 5;
+
+  @include media-query(tablet-landscape) {
+    height: 7rem;
+  }
+
+  @include media-query(mobile-landscape) {
+    padding: 0;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  &-brand {
+    @include media-query(mobile-landscape) {
+      margin-left: 3rem;
+    }
+  }
+
+  &-burger {
+    display: none;
+    position: relative;
+
+    @include media-query(mobile-landscape) {
+      display: block;
+      margin-right: 3rem;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 2.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-list {
+    display: flex;
+
+    @include media-query(mobile-landscape) {
+      display: none;
+      position: absolute;
+      top: 99%;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &-list-item {
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-nav-hover;
+    }
+
+    @include media-query(tablet-landscape) {
+      margin-left: 1.5rem;
+      padding: 0.8rem 2rem;
+    }
+
+    @include media-query(mobile-landscape) {
+      background-color: $color-white;
+      width: 100%;
+      border-radius: 0;
+      margin: -1px 0 0;
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+// HERO
+.hero {
+  height: 66rem;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url('../img/banner.png');
+  background-size: cover;
+  background-position: center;
+
+  @include media-query(laptop) {
+    height: 60rem;
+  }
+
+  @include media-query(tablet-portrait) {
+    background-position: right;
+  }
+
+  &-title {
+    color: $color-white;
+    font-size: 6rem;
+    line-height: 66rem;
+    text-align: center;
+
+    @include media-query(laptop) {
+      line-height: 60rem;
+    }
+  }
+}
+
+// FEATURE
+.feature {
+  &-content {
+    font-size: 1.6rem;
+    line-height: 4rem;
+  }
+
+  &-buttons {
+    margin-top: 4rem;
+  }
+
+  &-button {
+    font-family: 微軟正黑體;
+    font-weight: bold;
+    font-size: 3.6rem;
+    width: 30rem;
+    height: 16rem;
+    border-radius: 10px;
+    border: none;
+    color: $color-feature-button;
+    margin: 1rem;
+
+    &:nth-child(1) {
+      background-color: $color-feature-background-1;
+    }
+    &:nth-child(2) {
+      background-color: $color-feature-background-2;
+    }
+
+    @include media-query(tablet-portrait) {
+      width: 25rem;
+      height: 12rem;
+    }
+
+    @include media-query(mobile-landscape) {
+      font-size: 2.6rem;
+      width: 20rem;
+      height: 8rem;
+    }
+  }
+}
+
+// MENU
+.menu {
+  &-title {
+    font-family: 'Questrial';
+    font-weight: normal;
+  }
+
+  &-pics {
+    display: flex;
+    @include media-query(tablet-portrait) {
+      flex-wrap: wrap;
+    }
+  }
+  &-pic {
+    height: 48rem;
+    flex-basis: 25%;
+    background-size: cover;
+    background-position: center;
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        background-image: url('../img/menu0#{$i}.png');
+      }
+    }
+
+    @include media-query(laptop) {
+      height: 36rem;
+    }
+
+    @include media-query(tablet-landscape) {
+      height: 28rem;
+    }
+
+    @include media-query(tablet-portrait) {
+      flex-basis: 50%;
+    }
+
+    @include media-query(mobile-portrait) {
+      height: 30rem;
+      flex-basis: 100%;
+    }
+  }
+}
+
+// COMMENTS
+.comments {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+
+    @include media-query(tablet-portrait) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-comment {
+    flex-basis: 32%;
+    border: 1px solid $color-comment-border;
+    padding: 5rem 2rem 3rem;
+    position: relative;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) .comments-avatar {
+        background-image: url('../img/customer0#{$i}.png');
+      }
+    }
+
+    @include media-query(tablet-portrait) {
+      flex-basis: 49%;
+
+      &:last-child {
+        margin-top: 8rem;
+        flex-basis: 100%;
+      }
+    }
+
+    @include media-query(mobile-portrait) {
+      flex-basis: 100%;
+      &:not(:first-child) {
+        margin-top: 8rem;
+      }
+    }
+  }
+
+  &-avatar {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid #c1c1c1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 50%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include media-query(tablet-portrait) {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &-name {
+    margin-bottom: 2rem;
+  }
+
+  &-text {
+    font-size: 1.6rem;
+  }
+}
+
+// LOCATION
+.location {
+  margin-bottom: 4rem;
+}
+
+// CONTACT
+.contact {
+  background-color: $color-contact-background;
+  padding-bottom: 6rem;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-query(mobile-landscape) {
+      flex-wrap: wrap;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin: 1.6rem 0;
+  }
+
+  &-info {
+    text-align: left;
+
+    @include media-query(mobile-landscape) {
+      text-align: center;
+      flex-basis: 100%;
+    }
+  }
+
+  &-media {
+    text-align: right;
+
+    @include media-query(mobile-landscape) {
+      text-align: center;
+      flex-basis: 100%;
+      order: -1;
+    }
+  }
+
+  &-link {
+    font-family: 'Questrial';
+  }
+}
+
+// FOOTER
+.footer {
+  font-size: 1.6rem;
+  min-height: 5rem;
+  background-color: $color-footer-background;
+  text-align: center;
+  color: $color-white;
+  line-height: 5rem;
+
+  @include media-query(mobile-portrait) {
+    line-height: 3rem;
+  }
+}

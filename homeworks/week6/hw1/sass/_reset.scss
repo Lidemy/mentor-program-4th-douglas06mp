@@ -1,0 +1,69 @@
+//RESET
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $font-size;
+  font-family: 微軟正黑體;
+
+  @include media-query(tablet-portrait) {
+    font-size: 56.25%;
+  }
+
+  @include media-query(mobile-portrait) {
+    font-size: 50%;
+  }
+}
+
+section {
+  padding: 60px 0 20px;
+  text-align: center;
+}
+
+.sec-padding {
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+  @include media-query(laptop) {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  @include media-query(tablet-portrait) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @include media-query(mobile-landscape) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+a,
+button {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.sec-title {
+  font-size: 3.6rem;
+  display: inline-block;
+  border-left: 1.5rem solid $color-sec-title;
+  padding-left: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.brand {
+  font-family: 'Questrial';
+  color: $color-brand;
+  font-size: 3.6rem;
+}

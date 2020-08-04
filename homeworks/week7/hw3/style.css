@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Caveat', sans-serif;
+}
+
+body {
+  height: 100vh;
+  padding-top: 100px;
+  background: linear-gradient(0deg, #3779f1 0%, #7c24c3 100%);
+}
+
+.todo-container {
+  width: 400px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.todo-title {
+  color: #fff;
+  text-align: center;
+  font-size: 3.2rem;
+}
+
+.todo-input {
+  font-family: 'Caveat', sans-serif;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  font-size: 1.8rem;
+  padding: 8px 10px;
+  margin: 10px 0 20px;
+  outline: none;
+  border: none;
+}
+
+.todo-list {
+  list-style: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.todo-item {
+  font-size: 2rem;
+  height: 40px;
+  display: flex;
+}
+
+.todo-item:nth-child(2n) {
+  background-color: #e7e7e7;
+}
+
+.todo-item:hover .todo-delete {
+  width: 40px;
+  opacity: 1;
+}
+
+.todo-item.complete {
+  text-decoration: line-through;
+  color: #555;
+}
+
+.todo-delete {
+  display: inline-block;
+  background-color: #e74c3c;
+  width: 0;
+  opacity: 0;
+  position: relative;
+  transition: 0.3s all;
+}
+
+.todo-delete::before,
+.todo-delete::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.todo-delete::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.todo-delete::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.nav {
+  color: #262626;
+  background-color: #f1f1f1;
+  height: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.nav-brand {
+  font-size: 3rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  line-height: 5.5rem;
+}
+
+.nav-list-item {
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.nav-list-item:hover {
+  color: #f1f1f1;
+  background-color: #262626;
+}
+
+.stream {
+  min-height: calc(100vh - 5.5rem);
+  background-color: #6441a5;
+}
+
+.stream-container {
+  width: 100rem;
+  margin: auto;
+  padding-top: 3rem;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.stream-title {
+  font-size: 3rem;
+}
+
+.stream-desc {
+  font-size: 1.8rem;
+}
+
+.stream-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.stream-list .stream-item:nth-child(3n + 2) {
+  margin: 0 2rem;
+}
+
+.stream-item {
+  width: 32%;
+  height: 25rem;
+  margin-bottom: 2.5rem;
+  transition: 0.3s all;
+  cursor: pointer;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.stream-item:hover {
+  transform: scale(1.05);
+}
+
+.stream-display {
+  height: 18rem;
+  overflow: hidden;
+}
+
+.stream-info {
+  height: 7rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0.5rem;
+}
+
+.stream-avatar {
+  width: 18%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.stream-detail {
+  width: 80%;
+  text-align: left;
+}
+
+.stream-name {
+  height: 50%;
+  line-height: 25px;
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.stream-streamer {
+  height: 50%;
+  line-height: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}

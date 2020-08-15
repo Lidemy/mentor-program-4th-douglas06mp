@@ -1,0 +1,295 @@
+@charset "UTF-8";
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: 微軟正黑體;
+}
+@media only screen and (max-width: 876px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 414px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+section {
+  padding: 60px 0 20px;
+  text-align: center;
+}
+
+.sec-padding {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+@media only screen and (max-width: 1280px) {
+  .sec-padding {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+@media only screen and (max-width: 876px) {
+  .sec-padding {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .sec-padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+a,
+button {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.sec-title {
+  font-size: 3.6rem;
+  display: inline-block;
+  border-left: 1.5rem solid #a3dea2;
+  padding-left: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.brand {
+  font-family: 'Questrial';
+  color: #489846;
+  font-size: 3.6rem;
+}
+
+.nav {
+  position: fixed;
+  background-color: #fff;
+  height: 8rem;
+  width: 100%;
+  z-index: 5;
+}
+@media only screen and (max-width: 1124px) {
+  .nav {
+    height: 7rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .nav {
+    padding: 0;
+  }
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+@media only screen and (max-width: 667px) {
+  .nav-brand {
+    margin-left: 3rem;
+  }
+}
+.nav-burger {
+  display: none;
+  position: relative;
+}
+@media only screen and (max-width: 667px) {
+  .nav-burger {
+    display: block;
+    margin-right: 3rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}
+.nav-burger i {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav-list {
+  display: flex;
+}
+@media only screen and (max-width: 667px) {
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 99%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.nav-list-item {
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  padding: 1rem 2.5rem;
+  transition: all 0.3s;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.nav-list-item:hover {
+  color: #fff;
+  background-color: #ff7286;
+}
+@media only screen and (max-width: 1124px) {
+  .nav-list-item {
+    margin-left: 1.5rem;
+    padding: 0.8rem 2rem;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .nav-list-item {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0;
+    margin: -1px 0 0;
+    padding: 1.5rem 0;
+  }
+}
+
+.lottery {
+  height: calc(100vh - 28rem);
+  background-image: url('../img/games-bn.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.lottery.none {
+  background-color: #000;
+}
+
+.lottery.none .lottery-result {
+  color: #fff;
+}
+
+.lottery-container {
+  position: relative;
+  top: 12rem;
+  width: 50rem;
+  margin: auto;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.lottery-container.result {
+  background: none;
+  width: auto;
+}
+
+.lottery-title {
+  font-size: 2.4rem;
+  color: #5ec1b6;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.lottery-result {
+  font-size: 2.4rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.lottery-block {
+  display: flex;
+  padding: 2rem 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.lottery-info {
+  flex-basis: 20%;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.lottery-detail {
+  flex-basis: 80%;
+  font-size: 1.6rem;
+  line-height: 26px;
+}
+
+.lottery-btn {
+  display: block;
+  width: 40rem;
+  margin: 3.6rem auto 0;
+  padding: 1.5rem 0;
+  background-color: #e62a45;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact {
+  height: 23rem;
+  background-color: #e8efee;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 667px) {
+  .contact-container {
+    flex-wrap: wrap;
+  }
+}
+.contact p {
+  font-size: 1.4rem;
+  margin: 1.6rem 0;
+}
+.contact-info {
+  text-align: left;
+}
+@media only screen and (max-width: 667px) {
+  .contact-info {
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
+.contact-media {
+  text-align: right;
+}
+@media only screen and (max-width: 667px) {
+  .contact-media {
+    text-align: center;
+    flex-basis: 100%;
+    order: -1;
+  }
+}
+.contact-link {
+  font-family: 'Questrial';
+}
+
+.footer {
+  font-size: 1.6rem;
+  min-height: 5rem;
+  background-color: #35564b;
+  text-align: center;
+  color: #fff;
+  line-height: 5rem;
+}
+@media only screen and (max-width: 414px) {
+  .footer {
+    line-height: 3rem;
+  }
+}
